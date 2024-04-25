@@ -13,11 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", meldingerRoute)
 
 // Server statiske filer
-app.use("/", express.static(path.resolve(__dirname, "..", "build")));
+app.use("/", express.static(path.resolve(__dirname, "..", "dist")));
 
 // Server SPA
 app.use("*", (_, res) =>
-  res.sendFile(path.resolve(__dirname, "..", "build", "index.html"))
+  res.sendFile(path.resolve(__dirname, "..", "dist", "index.html"))
 );
 
 try {

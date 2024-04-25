@@ -2,7 +2,7 @@ const express = require("express");
 
 const meldingerRoute = express.Router()
 
-const messages = []
+const messages = ["hallo", "verden"]
 
 meldingerRoute.post("/", async (req, res) => {
   const message = req.body.message
@@ -12,7 +12,7 @@ meldingerRoute.post("/", async (req, res) => {
 });
 
 meldingerRoute.get("/", async (req, res) => {
-    return res.json({messages})
+  return res.json({ messages })
 })
 
 module.exports = meldingerRoute
