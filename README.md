@@ -1,6 +1,6 @@
 # Labyrintenfinale 2024
 
-Dette repoet er utgangspunkt for caseoppgaven. Det er satt opp slik at alt som pushes til git automagisk vil legge ut på heroku!
+Dette repoet er utgangspunkt for caseoppgaven i Labyrintenfinalen 2024. Her kan dere se et eksempel på en enkel frontendapp i React + Vite og en enkel express backend med et api for deltakere.
 
 ## Kom i gang
 
@@ -23,3 +23,9 @@ Dette repoet er utgangspunkt for caseoppgaven. Det er satt opp slik at alt som p
 2. Kjør `npm install` for å installere avhengigheter for frontend.
 3. Kjør `npm run dev`for å kjøre opp frontend. Den vil da starte opp på port 5173.
 4. Åpne nettleser på `localhost:5173` for å verifisere at frontend kjører.
+
+## Få ting ut i den store verden
+
+Vi bruker Heroku for å hoste appen: https://labyrintenfinale-case-2024-67c08d986b97.herokuapp.com/.
+
+For å dytte ting ut hit trenger dere bare å pushe til git, så fikser heroku pipeline resten. Om dere trenger å gjøre noen endringer i Heroku, kan dere ta kontakt med en av oss coacher!
