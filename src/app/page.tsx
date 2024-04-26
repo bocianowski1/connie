@@ -1,24 +1,9 @@
-import { StudyCycle } from "@/components/study-cycle";
+import Marquee from "react-fast-marquee";
+import { StudyCycle } from "@/components";
 
 export default function Home() {
   return (
     <div className="min-h-screen h-full flex flex-col">
-      <header className="flex items-center justify-between p-6">
-        <div>
-          <a className="font-serif font-medium text-2xl" href="/">
-            Connie
-          </a>
-        </div>
-
-        <menu>
-          <li>
-            <a className="text-sm font-medium" href="/login">
-              Logg inn
-            </a>
-          </li>
-        </menu>
-      </header>
-
       <div className="max-w-screen-md mx-auto w-full py-24 space-y-8">
         <h1 className="text-5xl text-center overflow-hidden text-balance max-w-92 mx-auto font-serif font-medium">
           Finn nyutdannede <br /> <StudyCycle /> <br />
@@ -32,6 +17,23 @@ export default function Home() {
             placeholder="Søk etter linjeforening..."
           />
         </div>
+      </div>
+
+      <div className="flex flex-col gap-4">
+        <Marquee>
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div key={i} className="p-4 bg-gray-100 rounded-lg mx-4">
+              <p className="text-sm">Linjeforening {i}</p>
+            </div>
+          ))}
+        </Marquee>
+        <Marquee direction="right">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div key={i} className="p-4 bg-gray-100 rounded-lg mx-4">
+              <p className="text-sm">Linjeforening {i}</p>
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
