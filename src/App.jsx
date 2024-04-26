@@ -1,44 +1,54 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
-import './App.css'
+import "./App.css";
 
-const contentType = new Headers()
-contentType.append('Content-Type', 'application/json')
+const contentType = new Headers();
+contentType.append("Content-Type", "application/json");
 
 function App() {
-  const [participants, setParticipants] = useState([])
-  const [newParticipant, setNewParticipant] = useState('')
+  const [participants, setParticipants] = useState([]);
+  const [newParticipant, setNewParticipant] = useState("");
 
   async function saveNewParticipant() {
-    const response = await fetch('/api/deltakere', { method: 'POST', headers: contentType, body: JSON.stringify({ participant: newParticipant }) })
-      .then(response => response.json())
-    
-    setParticipants(response.participants)
-    setNewParticipant('')
+    const response = await fetch("/api/deltakere", {
+      method: "POST",
+      headers: contentType,
+      body: JSON.stringify({ participant: newParticipant }),
+    }).then((response) => response.json());
+
+    setParticipants(response.participants);
+    setNewParticipant("");
   }
 
   useEffect(() => {
-    fetch('/api/deltakere', {method: 'GET'})
-      .then(response => response.json())
-      .then(json => setParticipants(json.participants))
-  }, [])
+    fetch("/api/deltakere", { method: "GET" })
+      .then((response) => response.json())
+      .then((json) => setParticipants(json.participants));
+  }, []);
 
   return (
-    <>
-      <h1>Labyrintenfinale 2024</h1>
+    <div className="spin">
+      <h1>go func() {"{ urself }()"}</h1>
       <h2>Deltakere:</h2>
       <div>
-        {participants.map(participant => <p key={participant}>{participant}</p>)}
+        {participants.map((participant) => (
+          <p key={participant}>{participant}</p>
+        ))}
       </div>
 
       <div className="participants-list">
         <label>
-          <input value={newParticipant} onChange={(e) => setNewParticipant(e.target.value)} />
+          <input
+            value={newParticipant}
+            onChange={(e) => setNewParticipant(e.target.value)}
+          />
         </label>
-        <button className="new-participant-button" onClick={saveNewParticipant}>Legg til ny deltaker</button>
+        <button className="new-participant-button" onClick={saveNewParticipant}>
+          Legg til ny deltaker
+        </button>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
