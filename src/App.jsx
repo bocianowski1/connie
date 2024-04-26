@@ -21,9 +21,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("/api/deltakere", { method: "GET" })
-      .then((response) => response.json())
-      .then((json) => setParticipants(json.participants));
+    window.location.href = "https://echo.uib.no";
   }, []);
 
   return (
