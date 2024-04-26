@@ -6,7 +6,7 @@ Dette repoet er utgangspunkt for caseoppgaven i Labyrintenfinalen 2024. Her kan 
 
 ### Førstegangsoppsett
 
-1. Klon dette repoet til din lokale maskin. Åpne terminalen, naviger til mappen du vil ha repoet i og skriv kommandoen `git clone git@github.com:bekk/labyrintenfinale-case-2024.git`.
+1. Klon dette repoet til din lokale maskin. Åpne terminalen, naviger til mappen du vil ha repoet i og skriv kommandoen `git clone git@github.com:bekk/labyrintenfinale-go-func-urself.git`.
 2. Sjekk at du har node og npm installert på din maskin med `npm --version` og `node --version`. Hvis du på en av disse får `command not found`, må du installere det, feks med brew. Spør gjerne en coach om hjelp!
 3. Installer `nodemon` med `npm install -g nodemon`
 
@@ -26,6 +26,6 @@ Dette repoet er utgangspunkt for caseoppgaven i Labyrintenfinalen 2024. Her kan 
 
 ## Få ting ut i den store verden
 
-Vi bruker Heroku for å hoste appen: https://labyrintenfinale-case-2024-67c08d986b97.herokuapp.com/.
+Vi bruker Heroku for å hoste appen: https://go-func-urself-2b827ed4ce8e.herokuapp.com/.
 
 For å dytte ting ut hit trenger dere bare å pushe til git, så fikser heroku pipeline resten. Om dere trenger å gjøre noen endringer i Heroku, kan dere ta kontakt med en av oss coacher!
