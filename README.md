@@ -12,11 +12,14 @@ Dette repoet er utgangspunkt for caseoppgaven. Det er satt opp slik at alt som p
 
 ### Kjøre opp backend
 
-1. Naviger inn i backend med `cd backend`
-2. Kjør `npm run dev` for å kjøre opp backend. Denne starter på port 5174.
+1. Naviger inn i backend med `cd backend`.
+2. Kjør `npm install` for å installere avhengigheter for backend.
+3. Kjør `npm run dev` for å kjøre opp backend. Denne vil da starte opp på port 5174.
+4. Åpne en nettleser på `localhost:5174/api/deltakere` for å verifisere at backend kjører.
 
 ### Kjøre opp frontend
 
-1. Naviger til roten av repoet igjen
-2. Kjør `npm run dev`. Frontend kjøres opp på port 5173.
-3. Åpne nettleser på `localhost:5173`
+1. Åpne nytt terminalvindu og naviger til roten av repoet.
+2. Kjør `npm install` for å installere avhengigheter for frontend.
+3. Kjør `npm run dev`for å kjøre opp frontend. Den vil da starte opp på port 5173.
+4. Åpne nettleser på `localhost:5173` for å verifisere at frontend kjører.

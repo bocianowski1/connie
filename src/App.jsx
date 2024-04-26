@@ -10,7 +10,7 @@ function App() {
   const [newParticipant, setNewParticipant] = useState('')
 
   async function saveNewParticipant() {
-    const response = await fetch('/api', { method: 'POST', headers: contentType, body: JSON.stringify({ participant: newParticipant }) })
+    const response = await fetch('/api/deltakere', { method: 'POST', headers: contentType, body: JSON.stringify({ participant: newParticipant }) })
       .then(response => response.json())
     
     setParticipants(response.participants)
@@ -18,25 +18,24 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('/api', {method: 'GET'})
+    fetch('/api/deltakere', {method: 'GET'})
       .then(response => response.json())
       .then(json => setParticipants(json.participants))
   }, [])
 
   return (
     <>
+      <h1>Labyrintenfinale 2024</h1>
       <h2>Deltakere:</h2>
       <div>
         {participants.map(participant => <p key={participant}>{participant}</p>)}
       </div>
 
-      <h2>Legg til deltaker:</h2>
-      <div style={{display: 'flex', flexDirection: 'column', gap: '0.5em'}}>
+      <div className="participants-list">
         <label>
-          Navn:<br />
           <input value={newParticipant} onChange={(e) => setNewParticipant(e.target.value)} />
         </label>
-        <button onClick={saveNewParticipant}>Lagre</button>
+        <button className="new-participant-button" onClick={saveNewParticipant}>Legg til ny deltaker</button>
       </div>
     </>
   )
