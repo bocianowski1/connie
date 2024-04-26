@@ -1,16 +1,16 @@
 const express = require("express")
 const path = require("path");
-const meldingerRoute = require("./api/meldinger.js");
+const participantsRoute = require("./api/deltakere.js");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5174;
 
 // Body parsing Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Lar meldingerRoute håndtere alt under /api
-app.use("/api", meldingerRoute)
+// Lar participantsRoute håndtere alt under /api
+app.use("/api", participantsRoute)
 
 // Server statiske filer
 app.use("/", express.static(path.resolve(__dirname, "..", "dist")));
