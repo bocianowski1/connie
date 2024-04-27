@@ -37,12 +37,15 @@ export default function Home() {
         <Marquee direction="right">
           {Array.from({ length: 3 }).map((_, i) =>
             imgPaths.map((path) => (
-              <div key={path} className="p-4 bg-gray-100 rounded-lg mx-4">
+              <div
+                key={path}
+                className="relative mx-4 p-4 bg-gray-100 rounded-lg flex flex-col h-28 w-auto items-center justify-center"
+              >
                 <Image
                   src={`/assets/${path}`}
-                  width={100}
-                  height={100}
-                  alt="none"
+                  alt="lol"
+                  className="h-full w-full"
+                  fill
                 />
               </div>
             ))
