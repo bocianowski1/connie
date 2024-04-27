@@ -1,23 +1,14 @@
+import { cookies } from "next/headers";
 import Link from "next/link";
 import appLogo from "../assets/appLogo.webp";
 import Image from "next/image";
 
-const items = [
-  {
-    name: "Finn nyutdannede",
-    href: "/finn-nyutdannede",
-  },
-  {
-    name: "Bli med",
-    href: "/",
-  },
-  {
-    name: "Logg inn",
-    href: "/logg-inn",
-  },
-];
+import { Fragment } from "react";
+import LogOutButton from "./logout";
 
 export const Header = () => {
+  const loggedInAs = cookies().get("user")?.value;
+
   return (
     <header className="flex items-center justify-between p-8 max-w-screen-2xl mx-auto">
       <div className="flex gap-2 items-center">
@@ -35,15 +26,23 @@ export const Header = () => {
         </div>
       </div>
       <menu>
-        {items.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className="px-4 py-2 rounded-full hover:bg-gray-300 transition-all"
-          >
-            {item.name}
+        {loggedInAs ? (
+          <Fragment>
+            <menu>
+              <li>
+                <Link href={`/${loggedInAs}/utforsk`}>Utforsk</Link>
+              </li>
+              <li>
+                <Link href={`/${loggedInAs}/dashboard`}></Link>
+              </li>
+            </menu>
+            <LogOutButton />
+          </Fragment>
+        ) : (
+          <Link className="text-sm font-medium" href="/logg-inn">
+            Logg inn
           </Link>
-        ))}
+        )}
       </menu>
     </header>
   );
