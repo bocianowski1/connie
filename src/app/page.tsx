@@ -14,8 +14,6 @@ export const metadata: Metadata = {
   title: "Connie",
 };
 
-export const dynamic = "force-dynamic";
-
 export default function Home() {
   return (
     <div className="min-h-screen h-full flex flex-col">
@@ -65,8 +63,8 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] -z-30"></div>
-      {/* <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div> */}
+      {/* <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] -z-30"></div> */}
+      <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
       <div className="absolute top-[640px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
 
       <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
