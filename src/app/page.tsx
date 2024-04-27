@@ -1,8 +1,8 @@
 import Marquee from "react-fast-marquee";
 import { StudyCycle } from "@/components";
 import Image from "next/image";
-import companyLogos from "../assets/companyLogos/companyLogos";
-import linjeForeningLogos from "../assets/linjeforeningLogos/linjeForeningLogos";
+import Bekk from "@/assets/companyLogos/bekkTransparent.png";
+import { companyLogos } from "../assets/companyLogos/companyLogos";
 
 export default function Home() {
   return (
@@ -30,23 +30,21 @@ export default function Home() {
             </div>
           ))}
         </Marquee>
-        <Marquee direction="right">
-          {Array.from({ length: 3 }).map((_, i) =>
-            companyLogos.map((img) => (
-              <div
-                key={String(img)}
-                className="relative mx-4 p-4 bg-gray-100 rounded-lg flex flex-col h-28 w-auto items-center justify-center"
-              >
-                <Image src={img} alt="lol" className="h-full w-full" fill />
-              </div>
-            ))
-          )}
 
-          {/* {Array.from({ length: 10 }).map((_, i) => (
-            <div key={i} className="p-4 bg-gray-100 rounded-lg mx-4">
-              <p className="text-sm">Linjeforening {i}</p>
-            </div>
-          ))} */}
+        <Marquee direction="right">
+          <div className="flex items-center gap-4 h-full">
+            {companyLogos.map((img) => (
+              <div key={String(img)}>
+                <Image
+                  src={img}
+                  alt="lol"
+                  height={1000}
+                  width={1000}
+                  className="h-40 w-full"
+                />
+              </div>
+            ))}
+          </div>
         </Marquee>
       </div>
     </div>
