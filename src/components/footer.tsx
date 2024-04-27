@@ -1,7 +1,7 @@
 export const Footer = () => {
   return (
     <footer className="bg-primary py-12">
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto px-6">
         <div className="py-12 flex items-center justify-between">
           <div>
             <h2 className="text-2xl font-serif mb-4">Connie</h2>
@@ -78,7 +78,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-8">© 2024 Connie. All rights reserved.</p>
+        <p className="mt-8">© 2024 Connie. Alle rettigheter reservert.</p>
       </div>
     </footer>
   );

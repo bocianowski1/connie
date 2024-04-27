@@ -1,49 +1,65 @@
+"use server";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import appLogo from "../assets/appLogo.webp";
 import Image from "next/image";
 
-import { Fragment } from "react";
 import LogOutButton from "./logout";
 
 export const Header = () => {
-  const loggedInAs = cookies().get("user")?.value;
+  const loggedIn = cookies().get("user")?.value;
 
   return (
-    <header className="flex items-center w-full justify-between p-8 max-w-screen-2xl mx-auto">
-      <div className="flex gap-2 items-center">
+    <header className="flex relative items-center w-full justify-between py-14 px-8 max-w-screen-2xl mx-auto">
+      <Link
+        href="/"
+        className="flex gap-2 items-center absolute left-0 px-4 translate-x-1/2"
+      >
         <Image
           src={appLogo}
           width={1000}
           height={1000}
-          alt="na"
+          alt="Connie"
           className="h-8 w-auto"
         />
-        <div>
-          <a className="font-serif font-medium text-3xl" href="/">
-            Connie
-          </a>
-        </div>
-      </div>
-      <menu>
-        {loggedInAs ? (
-          <Fragment>
-            <menu>
-              <li>
-                <Link href={`/${loggedInAs}/utforsk`}>Utforsk</Link>
-              </li>
-              <li>
-                <Link href={`/${loggedInAs}/dashboard`}></Link>
-              </li>
-            </menu>
-            <LogOutButton />
-          </Fragment>
+        <h1 className="font-serif font-medium text-3xl">Connie</h1>
+      </Link>
+
+      {Boolean(loggedIn) && (
+        <menu className="absolute flex items-center left-1/2 -translate-x-1/2 px-4">
+          <HeaderItem href={`/${loggedIn}/utforsk`}>Utforsk</HeaderItem>
+          <HeaderItem href={`/${loggedIn}/dashboard`}>Dashboard</HeaderItem>
+        </menu>
+      )}
+
+      <div className="absolute right-0 px-4 -translate-x-1/2">
+        {loggedIn ? (
+          <LogOutButton />
         ) : (
-          <Link className="text-sm font-medium" href="/logg-inn">
+          <Link className="primary-button" href="/logg-inn">
             Logg inn
           </Link>
         )}
-      </menu>
+      </div>
     </header>
+  );
+};
+
+export const HeaderItem = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: string;
+}) => {
+  return (
+    <li>
+      <Link
+        className="px-4 py-2 rounded-full hover:font-semibold transition-all hover:underline"
+        href={href}
+      >
+        {children}
+      </Link>
+    </li>
   );
 };

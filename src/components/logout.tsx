@@ -1,9 +1,9 @@
-"use client"
+"use client";
 import { logout } from "@/app/logg-inn/actions";
 
 export default function LogOutButton() {
   return (
-    <button onClick={() => logout()} className="text-sm font-medium">
+    <button onClick={() => logout()} className="primary-button">
       Logg ut
     </button>
   );
