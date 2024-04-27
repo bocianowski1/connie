@@ -2,7 +2,7 @@ import Marquee from "react-fast-marquee";
 import { StudyCycle } from "@/components";
 import Image from "next/image";
 import { companyLogos } from "../assets/companyLogos/companyLogos";
-import linjeForeningLogos from "@/assets/linjeforeningLogos/linjeForeningLogos";
+import { linjeforeningLogos } from "@/assets/linjeforeningLogos/linjeForeningLogos";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="flex flex-col gap-4">
         <Marquee>
           <div className="flex items-center gap-4 h-full">
-            {linjeForeningLogos.map((img) => (
+            {linjeforeningLogos.map((img) => (
               <div key={String(img)}>
                 <Image
                   src={img}
