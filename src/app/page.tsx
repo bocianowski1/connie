@@ -25,7 +25,7 @@ export default function Home() {
           <span>til din bedrift</span>
         </h1>
         <p className="text-lg text-gray-700 max-w-screen-md mx-auto py-8 text-center text-balance font-serif">
-          Coonie hjelper linjeforeninger og bedrifter med å finne hverandre. Vi
+          Connie hjelper linjeforeninger og bedrifter med å finne hverandre. Vi
           har tjenester som gjør det enklere for linjeforeninger å finne
           bedrifter som vil samarbeide, og for bedrifter å finne linjeforeninger
           som passer til deres behov.
