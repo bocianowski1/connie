@@ -7,18 +7,16 @@ export default function LoginPage() {
         <h1 className="text-3xl font-serif font-medium text-center">
           Logg inn
         </h1>
-        <Link
-          href="/bedrift/dashboard"
+        <button
           className="font-serif bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-lg"
         >
           Som bedrift
-        </Link>
-        <Link
-          href="/student/dashboard"
+        </button>
+        <button
           className="font-serif bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-lg"
         >
           Som student
-        </Link>
+        </button>
       </div>
     </main>
   );
