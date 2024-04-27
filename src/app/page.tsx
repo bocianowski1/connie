@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const count = await fetch(" https://beer-counter.omfj.workers.dev").then(
-    (res) => res.text().then((text) => parseInt(text))
-  );
+  const count = await fetch(" https://beer-counter.omfj.workers.dev", {
+    cache: "no-cache",
+  }).then((res) => res.text().then((text) => parseInt(text)));
 
   return (
     <div className="min-h-screen h-full flex flex-col">
