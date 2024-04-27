@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const marqueeDivs: string = "flex items-center gap-16 mr-16 h-full";
   return (
     <div className="min-h-screen h-full flex flex-col">
       <div className="max-w-screen-md mx-auto w-full py-24">
@@ -38,9 +39,9 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-4">
-        <Marquee>
-          <div className="flex items-center gap-4 h-full">
+      <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
+        <Marquee gradient gradientColor="#f0ece3" pauseOnHover>
+          <div className={marqueeDivs}>
             {linjeforeningLogos.map((img) => (
               <div key={String(img)}>
                 <Image
@@ -48,15 +49,22 @@ export default function Home() {
                   alt="lol"
                   height={1000}
                   width={1000}
-                  className="h-40 w-full"
+                  className="h-20 w-full"
                 />
               </div>
             ))}
+            <div>
+              <p className="text-2xl font-medium">Er du neste...?</p>
+            </div>
           </div>
         </Marquee>
-
-        <Marquee direction="right">
-          <div className="flex items-center gap-4 h-full">
+        <Marquee
+          direction="right"
+          gradient
+          gradientColor="#f0ece3"
+          pauseOnHover
+        >
+          <div className={marqueeDivs}>
             {companyLogos.map((img) => (
               <div key={String(img)}>
                 <Image
@@ -64,10 +72,13 @@ export default function Home() {
                   alt="lol"
                   height={1000}
                   width={1000}
-                  className="h-40 w-full"
+                  className="h-20 w-full"
                 />
               </div>
             ))}
+            <div>
+              <p className="text-2xl font-medium">Er du neste...?</p>
+            </div>
           </div>
         </Marquee>
       </div>
