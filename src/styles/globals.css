@@ -8,6 +8,7 @@
     --foreground: #1a1a1a;
 
     --primary: #f89439;
+    --primary-hover: #fdaf7a;
     --offwhite: #f6f4f1;
   }
 
@@ -27,6 +28,11 @@
     padding: 0.5rem 1rem;
     border-radius: 8px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .primary-button:hover {
+    background-color: var(--primary-hover);
   }
 
   .secondary-button {

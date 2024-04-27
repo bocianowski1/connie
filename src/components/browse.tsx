@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Bedrift, Linjeforening } from "@/data";
 
 export const Browse = ({
@@ -57,9 +58,14 @@ export const Browse = ({
               </p>
             </div>
             <div>
-              <button className="bg-primary w-fit text-white py-2 px-4 rounded-lg">
+              <Link
+                href={`/${
+                  d.type === "bedrift" ? "bedrift" : "linjeforening"
+                }/dashboard`}
+                className="primary-button"
+              >
                 Ta kontakt
-              </button>
+              </Link>
             </div>
           </div>
         );

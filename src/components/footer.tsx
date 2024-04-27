@@ -78,7 +78,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <p className="mt-8">© 2024 Connie. All rights reserved.</p>
+        <p className="mt-8">© 2024 Connie. Alle rettigheter reservert.</p>
       </div>
     </footer>
   );

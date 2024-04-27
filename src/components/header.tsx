@@ -11,7 +11,10 @@ export const Header = () => {
 
   return (
     <header className="flex relative items-center w-full justify-between py-14 px-8 max-w-screen-2xl mx-auto">
-      <div className="flex gap-2 items-center absolute left-0 px-4 translate-x-1/2">
+      <Link
+        href="/"
+        className="flex gap-2 items-center absolute left-0 px-4 translate-x-1/2"
+      >
         <Image
           src={appLogo}
           width={1000}
@@ -19,12 +22,8 @@ export const Header = () => {
           alt="Connie"
           className="h-8 w-auto"
         />
-        <div>
-          <a className="font-serif font-medium text-3xl" href="/">
-            Connie
-          </a>
-        </div>
-      </div>
+        <h1 className="font-serif font-medium text-3xl">Connie</h1>
+      </Link>
 
       {Boolean(loggedIn) && (
         <menu className="absolute flex items-center left-1/2 -translate-x-1/2 px-4">
@@ -37,10 +36,7 @@ export const Header = () => {
         {loggedIn ? (
           <LogOutButton />
         ) : (
-          <Link
-            className="bg-primary font-medium flex flex-row h-10 items-center justify-center px-4 text-white w-fit rounded-lg gap-4"
-            href="/logg-inn"
-          >
+          <Link className="primary-button" href="/logg-inn">
             Logg inn
           </Link>
         )}

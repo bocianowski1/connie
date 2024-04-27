@@ -56,7 +56,7 @@ export default async function Home() {
 
         <p className="w-fit mx-auto">
           <a
-            className="bg-primary font-medium flex flex-row h-10 items-center justify-center px-4 text-white w-fit rounded-lg gap-4"
+            className="primary-button flex flex-row items-center justify-center gap-4"
             href="/"
           >
             Bli med <ArrowRight className="h-5 w-5" />
