@@ -1,14 +1,10 @@
 import Marquee from "react-fast-marquee";
 import { StudyCycle } from "@/components";
 import Image from "next/image";
+import companyLogos from "../assets/companyLogos/companyLogos";
+import linjeForeningLogos from "../assets/linjeforeningLogos/linjeForeningLogos";
 
 export default function Home() {
-  const imgPaths = [
-    "soprasteriaTransparent.png",
-    "optiverTransparent.png",
-    "drdropinTransparent.png",
-    "bekkTransparent.png",
-  ];
   return (
     <div className="min-h-screen h-full flex flex-col">
       <div className="max-w-screen-md mx-auto w-full py-24 space-y-8">
@@ -36,17 +32,12 @@ export default function Home() {
         </Marquee>
         <Marquee direction="right">
           {Array.from({ length: 3 }).map((_, i) =>
-            imgPaths.map((path) => (
+            companyLogos.map((img) => (
               <div
-                key={path}
+                key={String(img)}
                 className="relative mx-4 p-4 bg-gray-100 rounded-lg flex flex-col h-28 w-auto items-center justify-center"
               >
-                <Image
-                  src={`/assets/${path}`}
-                  alt="lol"
-                  className="h-full w-full"
-                  fill
-                />
+                <Image src={img} alt="lol" className="h-full w-full" fill />
               </div>
             ))
           )}
