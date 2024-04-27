@@ -16,22 +16,12 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default async function Home() {
-  const count = await fetch(" https://beer-counter.omfj.workers.dev", {
-    cache: "no-cache",
-  }).then((res) => res.text().then((text) => parseInt(text)));
-
+export default function Home() {
   return (
     <div className="min-h-screen h-full flex flex-col">
-      {/* SLETT */}
-      <div className="py-4">
-        <p className="text-7xl text-center">ØL DRUKKET: {count} stk</p>
-      </div>
-      {/* SLETT SLUTT */}
-
       <div className="relative max-w-screen-md mx-auto w-full py-24">
         <h1
-          className="text-5xl flex flex-col gap-2 justify-center items-center 
+          className="text-5xl flex flex-col gap-2 justify-center items-center
                         overflow-hidden text-balance max-w-92 mx-auto font-serif font-medium"
         >
           <span>Finn nyutdannede</span>
