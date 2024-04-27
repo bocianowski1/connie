@@ -1,0 +1,45 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 117.89245867732916 91.65446861859013" width="235.78491735465832"
+    height="183.30893723718026">
+    <!-- svg-source:excalidraw -->
+
+    <defs>
+        <style class="style-fonts">
+            @font-face {
+            font-family: "Virgil";
+            src: url("https://excalidraw.com/Virgil.woff2");
+            }
+            @font-face {
+            font-family: "Cascadia";
+            src: url("https://excalidraw.com/Cascadia.woff2");
+            }
+            @font-face {
+            font-family: "Assistant";
+            src: url("https://app.excalidraw.com//dist/excalidraw-assets/Assistant-Regular.woff2");
+            }
+        </style>
+
+    </defs>
+    <rect x="0" y="0" width="117.89245867732916" height="91.65446861859013" fill="#00000000"></rect>
+    <g stroke-linecap="round">
+        <g
+            transform="translate(14.448384126989367 12.21187465302646) rotate(0 47.35025961197607 34.134830092789514)">
+            <path
+                d="M-1.96 -2.21 C-1.14 9.21, -11.37 63.1, 4.53 68.84 C20.43 74.57, 78.15 37.82, 93.44 32.2 M2.17 2.76 C2.67 13.24, -12.39 58.88, 2.4 64.13 C17.2 69.39, 75.06 38.62, 90.95 34.31"
+                stroke="#f08c00" stroke-width="2" fill="none"></path>
+        </g>
+        <g
+            transform="translate(14.448384126989367 12.21187465302646) rotate(0 47.35025961197607 34.134830092789514)">
+            <path
+                d="M70.74 51.11 C78.03 45.44, 81.64 42.73, 91.7 35.88 M72.69 51.92 C78.17 44.08, 85.43 37.83, 91.29 33.95"
+                stroke="#f08c00" stroke-width="2" fill="none"></path>
+        </g>
+        <g
+            transform="translate(14.448384126989367 12.21187465302646) rotate(0 47.35025961197607 34.134830092789514)">
+            <path
+                d="M64.39 35.24 C73.51 34.15, 78.93 35.97, 91.7 35.88 M66.34 36.04 C74.31 34.03, 83.91 33.64, 91.29 33.95"
+                stroke="#f08c00" stroke-width="2" fill="none"></path>
+        </g>
+    </g>
+    <mask></mask>
+</svg>
