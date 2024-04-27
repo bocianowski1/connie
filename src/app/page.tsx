@@ -1,8 +1,12 @@
 import Marquee from "react-fast-marquee";
 import { StudyCycle } from "@/components";
 import Image from "next/image";
-import Bekk from "@/assets/companyLogos/bekkTransparent.png";
 import { companyLogos } from "../assets/companyLogos/companyLogos";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Connie",
+};
 
 export default function Home() {
   return (
