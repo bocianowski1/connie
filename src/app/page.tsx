@@ -1,5 +1,4 @@
 import { StudyCycle } from "@/components";
-import NotionVC from "@/assets/notion-vc.webp";
 import Arrow from "@/assets/arrow.svg";
 import Image from "next/image";
 import { companyLogos } from "../assets/companyLogos/companyLogos";
@@ -7,6 +6,9 @@ import { linjeforeningLogos } from "@/assets/linjeforeningLogos/linjeForeningLog
 import { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import Slideshow from "@/components/Slideshow";
+import Fig9 from "@/assets/figs/fig-9.webp";
+import Fig13 from "@/assets/figs/fig-13.webp";
+import Fig2 from "@/assets/figs/fig-2.webp";
 
 export const metadata: Metadata = {
   title: "Connie",
@@ -24,12 +26,21 @@ export default function Home() {
           </span>
           <span>til din bedrift</span>
         </h1>
-        <p className="text-lg text-gray-700 max-w-screen-md mx-auto py-8 text-center text-balance font-serif">
-          Coonie hjelper linjeforeninger og bedrifter med å finne hverandre. Vi
-          har tjenester som gjør det enklere for linjeforeninger å finne
-          bedrifter som vil samarbeide, og for bedrifter å finne linjeforeninger
-          som passer til deres behov.
-        </p>
+        <div className="relative">
+          <Image
+            className="absolute top-0 right-32 -translate-y-[65%]"
+            src={Fig2}
+            width={75}
+            height={75}
+            alt="vc"
+          />
+          <p className="text-lg text-gray-700 max-w-screen-md mx-auto py-8 text-center text-balance font-serif">
+            Coonie hjelper linjeforeninger og bedrifter med å finne hverandre.
+            Vi har tjenester som gjør det enklere for linjeforeninger å finne
+            bedrifter som vil samarbeide, og for bedrifter å finne
+            linjeforeninger som passer til deres behov.
+          </p>
+        </div>
 
         <p className="w-fit mx-auto">
           <a
@@ -69,13 +80,15 @@ export default function Home() {
               til deres behov.
             </p>
           </div>
-          <div className="w-1/2">
-            <Image src={NotionVC} width={750} height={750} alt="vc stick man" />
+          <div className="w-1/2 flex items-center justify-center">
+            <Image src={Fig13} width={200} height={200} alt="vc stick man" />
           </div>
         </div>
 
-        <div className="max-w-screen-md mx-auto">
-          <div className="w-1/2"></div>
+        <div className="max-w-screen-md mx-auto flex items-center gap-8">
+          <div className="w-1/2 flex items-center justify-center">
+            <Image src={Fig9} width={200} height={200} alt="vc" />
+          </div>
           <div className="ml-auto w-1/2">
             <h2 className="text-3xl font-serif font-medium">
               Hvordan fungerer det?
