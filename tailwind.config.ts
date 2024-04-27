@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        offwhite: "var(--offwhite)",
       },
     },
   },

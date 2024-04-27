@@ -8,6 +8,7 @@
     --foreground: #1a1a1a;
 
     --primary: #f89439;
+    --offwhite: #f6f4f1;
   }
 
   * {
@@ -18,5 +19,22 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
+  }
+
+  .primary-button {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .secondary-button {
+    background-color: var(--offwhite);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    cursor: pointer;
   }
 }

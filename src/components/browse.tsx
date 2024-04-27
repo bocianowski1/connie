@@ -9,43 +9,61 @@ export const Browse = ({
   className?: string;
 }) => {
   return (
-    <ul className={`flex flex-col w-full ${className}`}>
+    <div className={`grid grid-cols-2 gap-4 w-full ${className}`}>
       {data.map((d) => {
         return (
-          <li
+          <div
             key={d.name}
-            className="p-4 border-b border-b-gray-500 flex justify-between"
+            className="p-4 flex flex-col justify-between rounded-2xl bg-offwhite border border-gray-500"
           >
-            <div className="flex items-center gap-4">
-              <Image
-                src={`/${
-                  d.type === "bedrift" ? "bedrifter" : "linjeforeninger"
-                }/${d.id}.${d.id === "echo" ? "webp" : "png"}`}
-                width={100}
-                height={100}
-                alt={d.name}
-                className="h-16 w-16 object-cover rounded-full border border-gray-500"
-              />
-              <div>
-                <h3 className="text-2xl font-serif font-medium">{d.name}</h3>
-                <div className="flex items-center">
-                  {d.locations.map((l, i) => (
-                    <span key={l}>
-                      {l}
-                      {i === d.locations.length - 1 ? "" : ","}
-                    </span>
-                  ))}
+            <div>
+              <div className="grid grid-cols-12">
+                <div className="col-span-3 size-20 rounded-full border border-gray-500 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src={`/${
+                      d.type === "bedrift" ? "bedrifter" : "linjeforeninger"
+                    }/${d.id}.${d.id === "echo" ? "webp" : "png"}`}
+                    width={100}
+                    height={100}
+                    alt={d.name}
+                    className="object-fill w-full scale-75"
+                  />
+                </div>
+                <div className="col-span-9">
+                  <h3 className="text-2xl font-serif font-medium">{d.name}</h3>
+                  <div className="flex items-center gap-1 text-gray-500 text-sm">
+                    {d.sectors.map((s, i) => (
+                      <span key={s} className="capitalize">
+                        {s}
+                        {i === d.sectors.length - 1 ? "" : ","}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-1 text-gray-500 text-sm">
+                    {d.locations.map((l, i) => (
+                      <span key={l}>
+                        {l}
+                        {i === d.locations.length - 1 ? "" : ","}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
+              <p className="max-w-[600px] py-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                veritatis tenetur nesciunt perferendis quam veniam, saepe
+                dolores suscipit? A consectetur ducimus similique distinctio nam
+                ab!
+              </p>
             </div>
-            <div className="pr-8">
-              <button className="bg-primary text-white py-2 px-4 rounded-lg">
+            <div>
+              <button className="bg-primary w-fit text-white py-2 px-4 rounded-lg">
                 Ta kontakt
               </button>
             </div>
-          </li>
+          </div>
         );
       })}
-    </ul>
+    </div>
   );
 };

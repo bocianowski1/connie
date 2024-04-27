@@ -1,24 +1,24 @@
 "use client";
 import { Browse } from "@/components";
-import { bedrifter, locations, sectors } from "@/data";
+import { linjeforeninger, locations, sectors } from "@/data";
 import { useState } from "react";
 
-export default function UtforskBedrifter() {
+export default function UtforskLinjeforeninger() {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [sector, setSector] = useState("");
-  const [filteredData, setFilteredData] = useState(bedrifter);
+  const [filteredData, setFilteredData] = useState(linjeforeninger);
 
   const reset = () => {
     setName("");
     setLocation("");
     setSector("");
-    setFilteredData(bedrifter);
+    setFilteredData(linjeforeninger);
   };
   return (
     <div className="px-32 space-y-24 max-w-screen-2xl">
       <h1 className="text-5xl text-balance font-serif font-medium">
-        Utforsk bedrifter
+        Utforsk linjeforeninger
       </h1>
       <div className="grid grid-cols-12 gap-4">
         <div className="col-span-3 space-y-2">
@@ -29,7 +29,7 @@ export default function UtforskBedrifter() {
             onChange={(e) => {
               setName(e.target.value);
               setFilteredData(
-                bedrifter.filter((d) => {
+                linjeforeninger.filter((d) => {
                   return d.name
                     .toLowerCase()
                     .includes(e.target.value.toLowerCase());
@@ -43,7 +43,7 @@ export default function UtforskBedrifter() {
             onChange={(e) => {
               setLocation(e.target.value);
               setFilteredData(
-                bedrifter.filter((d) => {
+                linjeforeninger.filter((d) => {
                   return d.locations.includes(e.target.value as never);
                 })
               );
@@ -62,7 +62,7 @@ export default function UtforskBedrifter() {
             onChange={(e) => {
               setSector(e.target.value);
               setFilteredData(
-                bedrifter.filter((d) => {
+                linjeforeninger.filter((d) => {
                   return d.sectors.includes(e.target.value as never);
                 })
               );

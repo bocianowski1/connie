@@ -40,6 +40,42 @@ export type Location =
   | "Amsterdam"
   | "Shanghai";
 
+export const sectors = [
+  "teknologi",
+  "informatikk",
+  "datasikkerhet",
+  "økonomi",
+  "finans",
+  "energi",
+  "media",
+  "helse",
+  "forsvar",
+  "forskningsinstitutt",
+  "offentlig",
+  "biologi",
+  "arkitektur",
+  "design",
+  "geologi",
+  "annet",
+] as Sector[];
+
+export const locations = [
+  "Oslo",
+  "Bergen",
+  "Trondheim",
+  "Stavanger",
+  "Tromsø",
+  "Kristiansand",
+  "Gjøvik",
+  "Ålesund",
+  "Halden",
+  "Molde",
+  "New York",
+  "London",
+  "Amsterdam",
+  "Shanghai",
+] as Location[];
+
 export const linjeforeninger = [
   {
     name: "echo – Linjeforeningen for informatikk",

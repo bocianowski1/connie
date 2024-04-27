@@ -1,3 +1,4 @@
+"use server";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import appLogo from "../assets/appLogo.webp";
@@ -58,7 +59,7 @@ export const HeaderItem = ({
   return (
     <li>
       <Link
-        className="px-4 py-2 rounded-full hover:bg-gray-200 transition-all hover:underline"
+        className="px-4 py-2 rounded-full hover:font-semibold transition-all hover:underline"
         href={href}
       >
         {children}
