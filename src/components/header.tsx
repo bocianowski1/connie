@@ -9,7 +9,7 @@ export const Header = () => {
 
       <menu>
         <li>
-          <a className="text-sm font-medium" href="/login">
+          <a className="text-sm font-medium" href="/logg-inn">
             Logg inn
           </a>
         </li>
