@@ -12,6 +12,7 @@ const config: Config = {
         primary: "var(--primary)",
         secondary: "var(--secondary)",
         offwhite: "var(--offwhite)",
+        lightgray: "var(--lightgray)",
       },
     },
   },

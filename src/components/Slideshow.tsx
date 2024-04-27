@@ -10,7 +10,12 @@ export default function Slideshow({
 }) {
   const marqueeDivs: string = "flex items-center gap-16 mr-16 h-full";
   return (
-    <Marquee direction={dir} gradient gradientColor="#f0ece3" pauseOnHover>
+    <Marquee
+      direction={dir}
+      gradient
+      gradientColor="var(--lightgray)"
+      pauseOnHover
+    >
       <div className={marqueeDivs}>
         {logos.map((img) => (
           <div key={String(img)}>
