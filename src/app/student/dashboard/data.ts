@@ -13,31 +13,31 @@ export type MessageOverview = {
 
 export const messageData: Array<MessageOverview> = [
   {
-    id: "helix",
-    name: "Helix",
-    imageURI: "/linjeforeninger/helix.png",
+    id: "bekk",
+    name: "Bekk",
+    imageURI: "/bedrifter/bekk.png",
     messages: [
       {
-        sender: "bekk",
-        content: "Hei fra bekk!",
+        sender: "helix",
+        content: "Hei fra helix!",
         sentAt: new Date(),
       }, 
       {
-        sender: "bekk",
+        sender: "helix",
         content: "Hvordan går det?",
         sentAt: new Date(),
       },
       {
-        sender: "helix",
+        sender: "bekk",
         content: "Hei, det går bra!",
         sentAt: new Date(),
       }
     ],
   },
   {
-    id: "echo",
-    name: "echo",
-    imageURI: "/linjeforeninger/echo.webp",
+    id: "DNB",
+    name: "DNB",
+    imageURI: "/bedrifter/dnb.png",
     messages: [
       {
         sender: "bekk",

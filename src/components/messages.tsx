@@ -43,7 +43,7 @@ export const MessageComponent = ({ m }: { m: MessageOverview }) => {
   };
 
   return (
-    <div className="flex flex-col p-10 m-4 bg-white rounded-lg gap-2">
+    <div className="flex flex-col p-10 m-4 bg-offwhite rounded-lg gap-2">
       <div className="flex justify-between">
         <p className="text-2xl font-bold">{m.id}</p>
         <Link href="/bedrift/dashboard">Tilbake</Link>
@@ -71,7 +71,7 @@ export const MessageComponent = ({ m }: { m: MessageOverview }) => {
         })}
         <div ref={bottomRef} />
       </div>
-      <div className="w-full border rounded-lg flex items-center">
+      <div className="w-full p-2 border rounded-lg flex items-center bg-white">
         <textarea
           className="p-2 text-lg w-full outline-0 resize-none"
           value={text}

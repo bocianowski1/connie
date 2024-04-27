@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import { messageData } from "../../data";
 import { MessageComponent } from "@/components/messages";
 
-export default function Message({
-  params,
+export default function Message ({
+  params
 }: {
   params: { contactID: string };
 }) {
