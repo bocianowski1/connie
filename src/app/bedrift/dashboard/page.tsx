@@ -1,13 +1,14 @@
-import { StudyCycle } from "@/components";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
-import { Chart } from "@/components/chart";
-
-export default function BedriftDashboard() {
+export default function DashBoard() {
   return (
-    <>
-      Hei på deg
-      <Chart></Chart>
-    </>
+    <div className="grid grid-cols-2">
+      <div className="border rounded-lg">
+        <p>Kontraker</p>
+      </div>
+      <div className="border rounded-lg">
+        <p>Profil</p>
+      </div>
+
+      <div className="col-span-2">Tidligere arrangementer</div>
+    </div>
   );
 }

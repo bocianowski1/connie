@@ -35,6 +35,11 @@
     background-color: var(--primary-hover);
   }
 
+  .primary-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
   .secondary-button {
     background-color: var(--offwhite);
     color: var(--primary);
