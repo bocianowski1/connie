@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   title: "Connie",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const count = await fetch(" https://beer-counter.omfj.workers.dev").then(
     (res) => res.text().then((text) => parseInt(text))
