@@ -3,6 +3,11 @@ import { StudyCycle } from "@/components";
 import Image from "next/image";
 import { companyLogos } from "../assets/companyLogos/companyLogos";
 import linjeForeningLogos from "@/assets/linjeforeningLogos/linjeForeningLogos";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Connie",
+};
 
 export default function Home() {
   return (
