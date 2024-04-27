@@ -1,10 +1,9 @@
-import Marquee from "react-fast-marquee";
 import { StudyCycle } from "@/components";
-import Image from "next/image";
 import { companyLogos } from "../assets/companyLogos/companyLogos";
 import { linjeforeningLogos } from "@/assets/linjeforeningLogos/linjeForeningLogos";
 import { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
+import Slideshow from "@/components/Slideshow";
 
 export const metadata: Metadata = {
   title: "Connie",
@@ -40,47 +39,8 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
-        <Marquee gradient gradientColor="#f0ece3" pauseOnHover>
-          <div className={marqueeDivs}>
-            {linjeforeningLogos.map((img) => (
-              <div key={String(img)}>
-                <Image
-                  src={img}
-                  alt="lol"
-                  height={1000}
-                  width={1000}
-                  className="h-20 w-full"
-                />
-              </div>
-            ))}
-            <div>
-              <p className="text-2xl font-medium">Er du neste...?</p>
-            </div>
-          </div>
-        </Marquee>
-        <Marquee
-          direction="right"
-          gradient
-          gradientColor="#f0ece3"
-          pauseOnHover
-        >
-          <div className={marqueeDivs}>
-            {companyLogos.map((img) => (
-              <div key={String(img)}>
-                <Image
-                  src={img}
-                  alt="lol"
-                  height={1000}
-                  width={1000}
-                  className="h-20 w-full"
-                />
-              </div>
-            ))}
-            <div>
-              <p className="text-2xl font-medium">Er du neste...?</p>
-            </div>
-          </div>
-        </Marquee>
+        <Slideshow logos={linjeforeningLogos} />
+        <Slideshow logos={companyLogos} dir="right" />
       </div>
     </div>
   );
