@@ -10,7 +10,7 @@ export const Header = () => {
   const loggedInAs = cookies().get("user")?.value;
 
   return (
-    <header className="flex items-center justify-between p-8 max-w-screen-2xl mx-auto">
+    <header className="flex items-center w-full justify-between p-8 max-w-screen-2xl mx-auto">
       <div className="flex gap-2 items-center">
         <Image
           src={appLogo}
