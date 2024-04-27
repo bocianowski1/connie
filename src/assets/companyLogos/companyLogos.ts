@@ -6,4 +6,4 @@ import Optiver from "./optiverTransparent.png";
 import Sopra from "./soprasteriaTransparent.png";
 import Tv2 from "./tv2Transparent.png";
 
-export default [Bekk, Dnb, Drdropin, Equinor, Optiver, Sopra, Tv2];
+export const companyLogos = [Bekk, Dnb, Drdropin, Equinor, Optiver, Sopra, Tv2];
