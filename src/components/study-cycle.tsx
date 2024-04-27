@@ -41,26 +41,26 @@ export const StudyCycle = () => {
   }, [current]);
 
   return (
-    <span className="relative">
-      <AnimatePresence key={current}>
+    <AnimatePresence key={current}>
+      <span className="">
         <motion.span
           initial={{
             opacity: 0,
-            y: 20,
+            x: -20,
           }}
           animate={{
             opacity: 1,
-            y: 0,
+            x: 0,
           }}
           exit={{
             opacity: 0,
-            y: -20,
+            x: 20,
           }}
-          className="absolute text-primary"
+          className="text-primary font-semibold"
         >
           {current}
         </motion.span>
-      </AnimatePresence>
-    </span>
+      </span>
+    </AnimatePresence>
   );
 };
