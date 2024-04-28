@@ -92,7 +92,7 @@ export const linjeforeninger = [
     type: "linjeforening",
   },
   {
-    name: "Abakus – Retards",
+    name: "Abakus – Linjeforening for informatikk",
     id: "abakus",
     sectors: ["teknologi", "informatikk", "datasikkerhet"],
     locations: ["Trondheim"],
