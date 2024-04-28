@@ -73,16 +73,12 @@ export default function Home() {
       <div className="mt-24 pb-24 space-y-12 bg-lightgray flex flex-col flex-1">
         <div className="max-w-screen-md mx-auto flex gap-8 items-center">
           <div className="w-1/2">
-            <h2 className="text-3xl font-serif font-medium">
-              Hvordan fungerer det?
-            </h2>
+            <h2 className="text-3xl font-serif font-medium">For studenter</h2>
             <p className="text-lg text-gray-700 mx-auto py-8 text-balance">
-              Vi har laget en plattform som gjør det enklere for linjeforeninger
-              å finne bedrifter som vil samarbeide, og for bedrifter å finne
-              linjeforeninger som passer til deres behov. Vi har tjenester som
-              gjør det enklere for linjeforeninger å finne bedrifter som vil
-              samarbeide, og for bedrifter å finne linjeforeninger som passer
-              til deres behov.
+              Vi tilbyr en innovativ plattform som forenkler prosessen med å
+              finne samarbeidsmuligheter med bedrifter for linjeforeninger.  Med
+              våre tjenester kan studenter raskt og effektivt koble seg sammen
+              med relevante bedrifter som ønsker å samarbeide. 
             </p>
           </div>
           <div className="w-1/2 flex items-center justify-center">
@@ -95,16 +91,16 @@ export default function Home() {
             <Image src={Fig9} width={200} height={200} alt="vc" />
           </div>
           <div className="ml-auto w-1/2">
-            <h2 className="text-3xl font-serif font-medium">
-              Hvordan fungerer det?
-            </h2>
+            <h2 className="text-3xl font-serif font-medium">For bedrifter</h2>
             <p className="text-lg text-gray-700 mx-auto py-8 text-balance">
-              Vi har laget en plattform som gjør det enklere for linjeforeninger
-              å finne bedrifter som vil samarbeide, og for bedrifter å finne
-              linjeforeninger som passer til deres behov. Vi har tjenester som
-              gjør det enklere for linjeforeninger å finne bedrifter som vil
-              samarbeide, og for bedrifter å finne linjeforeninger som passer
-              til deres behov.
+              Vår plattform tilbyr en unik mulighet for bedrifter å finne
+              passende linjeforeninger å samarbeide med. Med våre tjenester kan
+              bedrifter identifisere og nå ut til relevante
+              studentorganisasjoner som matcher deres behov og interesser. Enten
+              det er for å delta i arrangementer, tilby prosjektsamarbeid eller
+              rekruttere talenter, vår plattform gir en effektiv måte for
+              bedrifter å engasjere seg med en mangfoldig gruppe studenter og
+              styrke sitt tilstedeværelse på campus.
             </p>
           </div>
         </div>
