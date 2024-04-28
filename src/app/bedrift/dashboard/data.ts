@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image";
+import chart from "@/assets/chart.png"
+
 export type Message = {
   sender: string;
   content: string;
@@ -21,7 +24,7 @@ export const messageData: Array<MessageOverview> = [
         sender: "bekk",
         content: "Hei fra bekk!",
         sentAt: new Date(),
-      }, 
+      },
       {
         sender: "bekk",
         content: "Hvordan går det?",
@@ -31,7 +34,7 @@ export const messageData: Array<MessageOverview> = [
         sender: "helix",
         content: "Hei, det går bra!",
         sentAt: new Date(),
-      }
+      },
     ],
   },
   {
@@ -47,3 +50,19 @@ export const messageData: Array<MessageOverview> = [
     ],
   },
 ];
+
+export type Feedback = {
+  eventTitle: string;
+  eventDate: Date;
+  graph: StaticImageData
+  numberOfParticipants: number;
+};
+
+export const Feedbacks: Array<Feedback> = [
+  {
+    eventTitle: "Bedriftspresentasjon med echo",
+    eventDate: new Date(),
+    graph: chart,
+    numberOfParticipants: 42
+  }
+]
