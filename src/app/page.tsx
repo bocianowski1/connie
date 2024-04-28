@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen h-full flex flex-col">
       <div className="py-4">
-        <p className="text-7xl text-center">TIMER SOVET: 4</p>
+        <p className="text-7xl text-center">TIMER SOVET: 2.5</p>
       </div>
       <div className="relative max-w-screen-md mx-auto w-full py-24">
         <h1
