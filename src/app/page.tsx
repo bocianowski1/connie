@@ -17,6 +17,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="min-h-screen h-full flex flex-col">
+      <div className="py-4">
+        <p className="text-7xl text-center">TIMER SOVET: 4</p>
+      </div>
       <div className="relative max-w-screen-md mx-auto w-full py-24">
         <h1
           className="text-5xl flex flex-col gap-2 justify-center items-center
@@ -62,16 +65,13 @@ export default function Home() {
           className="-z-10 absolute bottom-16 left-20 rotate-[10deg]"
         />
       </div>
-
       {/* <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] -z-30"></div> */}
       <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
       <div className="absolute top-[640px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
-
       <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
         <Slideshow logos={linjeforeningLogos} />
         <Slideshow logos={companyLogos} dir="right" />
       </div>
-
       <div className="mt-24 pb-24 space-y-12 bg-lightgray">
         <div className="max-w-screen-md mx-auto flex gap-8 items-center">
           <div className="w-1/2">
