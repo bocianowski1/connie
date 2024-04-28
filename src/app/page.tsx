@@ -63,14 +63,14 @@ export default function Home() {
           className="-z-10 absolute bottom-16 left-20 rotate-[10deg]"
         />
       </div>
-      <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] bg-repeat-x -z-30"></div>
+      <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] bg-repeat -z-30"></div>
       <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
 
       <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
         <Slideshow logos={linjeforeningLogos} />
         <Slideshow logos={companyLogos} dir="right" />
       </div>
-      <div className="mt-24 pb-24 space-y-12 bg-lightgray">
+      <div className="mt-24 pb-24 space-y-12 bg-lightgray flex flex-col flex-1">
         <div className="max-w-screen-md mx-auto flex gap-8 items-center">
           <div className="w-1/2">
             <h2 className="text-3xl font-serif font-medium">
