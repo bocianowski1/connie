@@ -29,7 +29,6 @@ export const Header = () => {
         <menu className="absolute flex items-center left-1/2 -translate-x-1/2 px-4">
           <HeaderItem href={`/${loggedIn}/utforsk`}>Utforsk</HeaderItem>
           <HeaderItem href={`/${loggedIn}/dashboard`}>Dashboard</HeaderItem>
-          <HeaderItem href={`/${loggedIn}/kontrakter`}>Kontrakter</HeaderItem>
         </menu>
       )}
 
