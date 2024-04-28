@@ -24,7 +24,7 @@ export default function Slideshow({
               alt="lol"
               height={1000}
               width={1000}
-              className="h-20 w-full"
+              className="h-20 w-auto"
             />
           </div>
         ))}
