@@ -9,6 +9,7 @@ import Slideshow from "@/components/Slideshow";
 import Fig9 from "@/assets/figs/fig-9.webp";
 import Fig13 from "@/assets/figs/fig-13.webp";
 import Fig2 from "@/assets/figs/fig-2.webp";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Connie",
@@ -46,12 +47,12 @@ export default function Home() {
         </div>
 
         <p className="w-fit mx-auto">
-          <a
+          <Link
             className="primary-button flex flex-row items-center justify-center gap-4"
-            href="/"
+            href="/logg-inn"
           >
             Bli med <ArrowRight className="h-5 w-5" />
-          </a>
+          </Link>
         </p>
 
         <Image
@@ -62,7 +63,7 @@ export default function Home() {
           className="-z-10 absolute bottom-16 left-20 rotate-[10deg]"
         />
       </div>
-      <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] -z-30"></div>
+      <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] bg-repeat-x -z-30"></div>
       <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
 
       <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
