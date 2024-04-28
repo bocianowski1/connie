@@ -21,10 +21,14 @@ export function FeedbackPreview({
           <div className="mr-8">4/4</div>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-4">
         <div className="flex flex-col bg-lightgray items-center justify-center h-36 w-36 border rounded-3xl">
           <p> Antall deltakere</p>
           <div className="text-3xl font-extrabold ">{numberOfParticipants}</div>
+        </div>
+        <div className="flex flex-col bg-lightgray items-center justify-center h-36 w-36 border rounded-3xl">
+          <p> Dukket ikke opp:</p>
+          <div className="text-3xl font-extrabold ">4</div>
         </div>
       </div>
     </div>
