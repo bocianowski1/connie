@@ -32,7 +32,7 @@ export default function Home() {
 
         <div className="relative">
           <Image
-            className="absolute top-0 right-32 -translate-y-[65%]"
+            className="absolute top-0 right-12 md:right-24 lg:right-32 -translate-y-[65%]"
             src={Fig2}
             width={75}
             height={75}
@@ -60,37 +60,37 @@ export default function Home() {
           width={200}
           height={200}
           alt="arrow"
-          className="-z-10 absolute bottom-16 left-20 rotate-[10deg]"
+          className="-z-10 absolute bottom-14 lg:bottom-16 left-8 md:left-20 lg:left-20 scale-75 md:scale-90 lg:scale-100 rotate-[10deg]"
         />
       </div>
       <div className="absolute top-0 h-[900px] left-0 right-0 bg-[url(/line-in-motion.svg)] bg-repeat -z-30"></div>
-      <div className="absolute top-[530px] -left-[10%] -right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
+      <div className="absolute top-[530px] -left-[30%] lg:-left-[10%] -right-[30%] lg:-right-[10%] h-[700px] rounded-t-[100%] bg-lightgray -z-20"></div>
 
-      <div className="flex flex-col gap-20 max-w-screen-xl mx-auto">
+      <div className="flex flex-col gap-14 md:gap-20 max-w-screen-xl mx-auto">
         <Slideshow logos={linjeforeningLogos} />
         <Slideshow logos={companyLogos} dir="right" />
       </div>
-      <div className="mt-24 pb-24 space-y-12 bg-lightgray flex flex-col flex-1">
+      <div className="mt-24 px-8 pb-24 space-y-12 bg-lightgray flex flex-col flex-1">
         <div className="max-w-screen-md mx-auto flex gap-8 items-center">
-          <div className="w-1/2">
+          <div className="w-2/3 lg:w-1/2">
             <h2 className="text-3xl font-serif font-medium">For studenter</h2>
             <p className="text-lg text-gray-700 mx-auto py-8 text-balance">
               Vi tilbyr en innovativ plattform som forenkler prosessen med å
-              finne samarbeidsmuligheter med bedrifter for linjeforeninger.  Med
+              finne samarbeidsmuligheter med bedrifter for linjeforeninger. Med
               våre tjenester kan studenter raskt og effektivt koble seg sammen
-              med relevante bedrifter som ønsker å samarbeide. 
+              med relevante bedrifter som ønsker å samarbeide.
             </p>
           </div>
-          <div className="w-1/2 flex items-center justify-center">
+          <div className="w-1/3 lg:w-1/2 flex items-center justify-center">
             <Image src={Fig13} width={200} height={200} alt="vc stick man" />
           </div>
         </div>
 
         <div className="max-w-screen-md mx-auto flex items-center gap-8">
-          <div className="w-1/2 flex items-center justify-center">
+          <div className="w-1/3 lg:w-1/2 flex items-center justify-center">
             <Image src={Fig9} width={200} height={200} alt="vc" />
           </div>
-          <div className="ml-auto w-1/2">
+          <div className="ml-auto w-2/3 lg:w-1/2">
             <h2 className="text-3xl font-serif font-medium">For bedrifter</h2>
             <p className="text-lg text-gray-700 mx-auto py-8 text-balance">
               Vår plattform tilbyr en unik mulighet for bedrifter å finne

@@ -24,12 +24,12 @@ export default function Slideshow({
               alt="lol"
               height={1000}
               width={1000}
-              className="h-20 w-auto"
+              className="h-14 md:h-20 w-auto"
             />
           </div>
         ))}
         <div>
-          <p className="text-2xl font-medium">Er du neste...?</p>
+          <p className="text-lg md:text-2xl font-medium">Er du neste...?</p>
         </div>
       </div>
     </Marquee>
